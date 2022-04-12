@@ -3,7 +3,7 @@ Status: hidden
 
 The slider track accessory was new because I could not find any documents online that mentioned it.
 
-There's not much to it either way. It's a square platfornm that slides on two rails and is controlled by a stepper motor.
+There's not much to it either way. It's a square platform that slides on two rails and is controlled by a stepper motor.
 
 %%% figure
     ![slider]({attach}start/slider/slider_length.png)
