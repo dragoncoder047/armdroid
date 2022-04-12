@@ -5,12 +5,12 @@
     --white: black;
     --lightgray: #888;
     --darkgray: #444;
-    --theme-1-darker: blue;
-    --theme-1: #06f;
-    --theme-1-lightest: #38f;
-    --theme-1-lightest: lightblue;
-    --theme-2-darker: #c70;
-    --theme-2: darkorange;
+    --theme-1-darker: #f60;
+    --theme-1: darkorange;
+    --theme-1-lighter: darkorange;
+    --theme-1-lightest: #fa4;
+    --theme-2-darker: blue;
+    --theme-2: #06f;
     --theme-3: red;
     --theme-3-darker: maroon;
     --theme-4: lime;
