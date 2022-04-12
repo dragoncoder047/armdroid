@@ -15,6 +15,7 @@ Here's all the power connectors on the base:
 
 %%% figure
     ![base connectors]({attach}start/front.png)
+
     %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/).
 
 The fourth accessory output is mounted on the shoulder.
