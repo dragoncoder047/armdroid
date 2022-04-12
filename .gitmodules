@@ -1,0 +1,3 @@
+[submodule "pelicantheme"]
+	path = pelicantheme
+	url = https://github.com/dragoncoder047/pelicantheme.git
