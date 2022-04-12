@@ -7,6 +7,7 @@ There's not much to it either way. It's a square platfornm that slides on two ra
 
 %%% figure
     ![slider]({attach}start/slider/slider_length.png)
+
     %: There's about 415 mm of travel in the slider mechanism.
 
 The motor end has a small pulley on the screw and a large pulley on the motor, to make it go faster, at the expense of precision. You can also see the female GX-16 connector that plugs into the accessory motor port on the Armdroid.

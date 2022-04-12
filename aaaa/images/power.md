@@ -19,6 +19,7 @@ Pulling the capacitor out of the clamp allowed me to get a shot of the underside
 
 %%% figure
     ![underside]({attach}start/power/power_inside_under.jpg)
+
     %: The large capacitor looks like it is rated for 25V, but when I turned on the power supply it charged up to 60V. I'm proably not reading that label right.
 
 Here's a zoomed in shot of the circuit board. The first thing that jumped out at me was the LM723CN power regulator.

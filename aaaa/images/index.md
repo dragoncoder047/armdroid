@@ -27,24 +27,28 @@ The labeling on the Armdroid 1000 was a little bit confusing. The serial number 
 
 %%% figure
     ![side of armdroid]({attach}start/side.png)
+
     %: Where is D&M based out of??
 
 The shoulder contains five of the six motors that drive the movements of the Armdroid 1000. THe motion is transmitted up to the joints by toothed timing belts and pulleys.
 
 %%% figure
     ![gears view]({attach}start/shoulder.png)
+
     %: The wrist and claw motor's pulleys have 20 teeth while the elbow and shoulder pulleys have 14. The larger reduction pulleys have 72 teeth, and the gear pairs have 12 and 108 teeth (a 1:9 reduction).
 
 The Most of the joints have a pretty wide range of motion. It can easily flip over backwards and reveal the belts and tension rollers underneath.
 
 %%% figure
     ![flip over]({attach}start/broken_base.png)
+
     %: This was taken of the broken Armdroid. The serial of that one is 1106.
 
 The sixth motor rotates the base via another gear-and pulley setup.
 
 %%% figure
     ![base]({attach}start/top_base.png)
+
     %: This was taken of the Armdroid in better condition. The serial number of that one is 1105.
 
 ## Elbow and Claw
@@ -59,6 +63,7 @@ The intact Armdroid (serial number 1105) had the two-finger claw on it. The brok
 %%% figure
     ![three finger claw]({attach}start/claw/claw_broken.png)
     ![two finger claw]({attach}start/claw/claw.png)
+
     %: It's a shame the three-finger claw is broken. It would look really cool!
 
 ## Circuitry
@@ -75,10 +80,12 @@ There is more point-to-point wiring inside the base (here of the broken Armdroid
 
 %%% figure
     ![inside base]({attach}start/inside_base.png)
+
     %: **Man**, those wires are twisted up.
 
 Taking a closer look, the motor is a standard 200 steps/revolution unipolar motor. Additionally, the shoulder had been twisted around so many times that the wire leading up to the fourth accessory output in the shoulder yanked off the terminal of the third output.
 
 %%% figure
     ![inside base detail]({attach}start/inside_detail.png)
+
     %: Yep, it's broken.
