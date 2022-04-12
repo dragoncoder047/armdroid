@@ -69,6 +69,7 @@ PAGE_URL = PAGE_SAVE_AS = 'p/{path_no_ext}.html'
 
 PAGE_PATHS = ['']
 ARTICLE_PATHS = [] # they are all pages
+STATIC_PATHS = [] # everything is attached
 
 THEME = './pelicantheme'
 
