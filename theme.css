@@ -1,0 +1,26 @@
+:root {
+    --color-bg: #eee;
+    --color-fg: #0a0a0a;
+    --black: white;
+    --white: black;
+    --lightgray: #888;
+    --darkgray: #444;
+    --theme-1-darker: blue;
+    --theme-1: #06f;
+    --theme-1-lightest: #38f;
+    --theme-1-lightest: lightblue;
+    --theme-2-darker: #c70;
+    --theme-2: darkorange;
+    --theme-3: red;
+    --theme-3-darker: maroon;
+    --theme-4: lime;
+    --theme-4-darker: green;
+    --color-heading: var(--theme-2);
+    --color-link: var(--theme-2);
+    --color-link-visited: var(--theme-1);
+    --color-open-tab: var(--theme-3);
+    --color-footer: var(--darkgray);
+    --font-heading: "Computro Mono", monospace;
+    --font-body: "Open Sans", sans-serif;
+    --font-code: "Ubuntu Mono", monospace;
+}
