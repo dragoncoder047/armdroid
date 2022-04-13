@@ -11,7 +11,8 @@ You can also find some of these links at the bottom of every page.
 ## Armdroid 1s
 
 * [Richard Morris&apos; Armdroid 1](https://armdroid1.blogspot.com/)
-* [Alex Zivanovic&apos;s Armdroid 1](http://www.senster.com/alex_zivanovic/armdroid/index.htm)
+* [Alex Zivanovic&apos;s Armdroid](http://www.senster.com/alex_zivanovic/armdroid/index.htm)
+* [Neil Fazakerly&apos;s Armdroid page](http://www.riscy.uk/beebcontrol/arms/armdroid/index.html)
 
 ## Armdroid 1000s / LabVolt 5100s
 
@@ -36,3 +37,5 @@ Andres Gazso has scanned his Armdroid 1 manual and it is now hosted on Alex Ziva
 7. [Subroutines](http://www.senster.com/alex_zivanovic/armdroid/07-Subroutines.pdf) ([local copy]({attach}arm1man/man7.pdf))
 8. [Applications](http://www.senster.com/alex_zivanovic/armdroid/08-Applications.pdf) ([local copy]({attach}arm1man/man8.pdf))
 9. [Blueprints](http://www.senster.com/alex_zivanovic/armdroid/09-Blueprints.pdf) ([local copy]({attach}arm1man/man9.pdf))
+
+Neil Fazakerly has a full copy of a manual that has been run through an OCR program so you can search the text. To repeat Neil's warning, there might be a computer error with the OCR here and there, so it's best to cross reference with Andres' scanned copy above. You can find that manual [here](http://www.riscy.uk/beebcontrol/arms/armdroid/manual/armdroid1-manual.pdf) ([local copy]({attach}arm1man/full_OCR_man.pdf))
