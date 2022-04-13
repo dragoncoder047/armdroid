@@ -30,14 +30,14 @@ The labeling on the Armdroid 1000 was a little bit confusing. The serial number 
 
     %: Where is D&M based out of??
 
-The shoulder contains five of the six motors that drive the movements of the Armdroid 1000. THe motion is transmitted up to the joints by toothed timing belts and pulleys.
+The shoulder contains five of the six motors that drive the movements of the Armdroid 1000. The motion is transmitted up to the joints by toothed timing belts and pulleys.
 
 %%% figure
     ![gears view]({attach}start/shoulder.png)
 
     %: The wrist and claw motor's pulleys have 20 teeth while the elbow and shoulder pulleys have 14. The larger reduction pulleys have 72 teeth, and the gear pairs have 12 and 108 teeth (a 1:9 reduction).
 
-The Most of the joints have a pretty wide range of motion. It can easily flip over backwards and reveal the belts and tension rollers underneath.
+Most of the joints have a pretty wide range of motion. It can easily flip over backwards and reveal the belts and tension rollers underneath.
 
 %%% figure
     ![flip over]({attach}start/broken_base.png)
