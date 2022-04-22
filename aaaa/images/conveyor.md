@@ -18,7 +18,7 @@ Inside the control box you can see the toroidal transformer in the back, the ste
 %%% figure
     ![conveyor inside]({attach}start/conveyor/conveyor_inside.png)
 
-    %: I'm guessing the heatsunk one is probably the Darlington switch that runs the motor, while the larger of the unheatsunk ones is some sort of binary counter thing to count the pulses from the oscillator and turn it into control signals for the motor. The small 8-pin microchip (behind the small blue capacitor) is probably a 555 timer or something to generate a clock signal.
+    %: The heatsunk one is a ULN2003A Darlington switch that runs the motor, while the other large chip is a 74LS175 quad D flip-flop with the flops wired into each other to count the pulses from the oscillator and turn it into control signals for the motor. The small 8-pin microchip (behind the small blue 4.7&micro;F capacitor) is a 555 timer to generate a clock signal.
 
 The back of the control board contains some point-to-point wiring to connect all the banana jacks and switches to the ribbon cable from the main circuit board.
 
