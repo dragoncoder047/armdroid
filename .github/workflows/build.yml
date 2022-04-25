@@ -1,7 +1,7 @@
 name: build site using Pelican
 on:
   push:
-    branches: [main]
+    branches: [master]
 jobs:
   build-main:
     runs-on: ubuntu-latest
