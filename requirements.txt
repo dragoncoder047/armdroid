@@ -12,5 +12,4 @@ cython
 pelican-read-more
 pelican-jinja2content
 pelican-series
-#pygments-ipython-console
 pelican-more-categories
