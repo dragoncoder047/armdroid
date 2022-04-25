@@ -1,0 +1,16 @@
+pelican
+pelican-seo
+pelican-share-post
+#pelican-sitemap
+pelican-related-posts
+pymdown-extensions
+markdown-figcap
+mdx-include
+python-markdown-comments
+minchin.pelican.plugins.nojekyll
+cython
+pelican-read-more
+pelican-jinja2content
+pelican-series
+#pygments-ipython-console
+pelican-more-categories
