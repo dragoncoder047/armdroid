@@ -14,7 +14,7 @@ jobs:
         run: |
           cd pelicantheme
           git fetch --all
-          git reset --hard origin/master
+          git reset --hard origin/main
           cd ..
       - name: set up python
         uses: actions/setup-python@v3
