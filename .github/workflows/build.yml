@@ -13,6 +13,7 @@ jobs:
       - name: pull theme repo
         run: |
           cd pelicantheme
+          git config pull.rebase true
           git pull
           cd ..
       - name: set up python
