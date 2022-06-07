@@ -12,4 +12,4 @@ The Armdroid needs 12 volts and 4 amps to run. An internal regulator produces th
 
 The Armdroid 1000 also includes four digital sensor inputs mounted on the base, four accessory outputs (three on the base and one on the shoulder), and a seventh accessory motor output connector (5-pin GX-16) on the base.
 
-**Currently the only thing that is on this site is photos and links to external resources, however, this will be updated soon.**
+**Currently the only thing that is on this site is photos and links to external resources, however, this will likely be updated in the fall whan I get back from summer break.**
