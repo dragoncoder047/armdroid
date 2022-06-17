@@ -16,14 +16,14 @@
 
     <meta property="og:site_name" content="Armdroid 1000" />
     <meta property="og:title" content="Armdroid 1000 - Images" />
-    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
+    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. AFAIK, that pinout …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="page" />
     <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/p/images/index.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Armdroid 1000 - Images" />
-    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
+    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. AFAIK, that pinout …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
     
     </head>
@@ -58,7 +58,7 @@
 <p>Here&rsquo;s all the power connectors on the base:</p>
 <figure class="figure">
 <p><img alt="base connectors" src="https://dragoncoder047.github.io/armdroid/p/images/start/front.png"></p>
-<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>.</figcaption>
+<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>. AFAIK, that pinout is correct. However, <strong>the &ldquo;accessory inputs&rdquo; annotations are all WRONG</strong>. The ones I have marked &ldquo;accessory outputs&rdquo; are indeed outputs and are driven by the same driver IC as the stepper motors, so they can do the same 380 mA as the motors at the 12V or whatever that is supplied. <strong>The ones marked &ldquo;accessory inputs&rdquo; are NOT inputs. They are lower power logic outputs (0-5V, 20 mA).</strong></figcaption>
 </figure>
 <p>The fourth accessory output is mounted on the shoulder.</p>
 <figure class="figure">
@@ -96,7 +96,7 @@
 <figcaption>It&rsquo;s a shame the three-finger claw is broken. It would look really cool!</figcaption>
 </figure>
 <h2 id="circuitry">Circuitry</h2>
-<p>The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant bidirectional demultiplexer that routes the control signals to the right motor and read out the accessory inputs.</p>
+<p>The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant demultiplexer that routes the control signals to the right motor or output.</p>
 <figure class="figure">
 <p><img alt="circuit top" src="https://dragoncoder047.github.io/armdroid/p/images/start/circuits/circuit_top.png">
 <img alt="circuit bottom" src="https://dragoncoder047.github.io/armdroid/p/images/start/circuits/circuit_bottom.png"></p>
