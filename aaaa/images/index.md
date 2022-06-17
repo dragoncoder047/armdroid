@@ -76,14 +76,14 @@ The circuit board inside contains a bunch of microchips in sockets that, as far 
 
 Dan Kohn has done the work of figuring out the general schematic of the circuit inside (although his pinout of the DB9 connector differs from the one I found above). You can find his schematic [here](http://dankohn.info/projects/armdroid_1000/schematic.pdf) (and if that goes down, there's a link to a local copy [here]({filename}../resources/index.md)).
 
-There is more point-to-point wiring inside the base (here of the broken Armdroid). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power plug. The positive wires also go through the kill switch and to one terminal of each of the accessory outputs. The inputs are wired to their own plug.
+There is more point-to-point wiring inside the base (here of the broken Armdroid). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The inputs are wired to their own plug.
 
 %%% figure
     ![inside base]({attach}start/inside_base.png)
 
     %: **Man**, those wires are twisted up.
 
-Taking a closer look, the motor is a standard 200 steps/revolution unipolar motor. Additionally, the shoulder had been twisted around so many times that the wire leading up to the fourth accessory output in the shoulder yanked off the terminal of the third output.
+Taking a closer look, the motor is a standard 200 steps/revolution unipolar motor. Unfortunately, in the broken Armdroid, the shoulder had been twisted around so many times that the wire leading up to the fourth accessory output in the shoulder yanked off the terminal of the third output and tore some of the wires leading to the motors.
 
 %%% figure
     ![inside base detail]({attach}start/inside_detail.png)

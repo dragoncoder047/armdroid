@@ -22,6 +22,17 @@ As far as I know, the only difference between the Armdroid 1000 and the LabVolt 
 * [Armdroid 1000 site - unknown author](https://armdroid1000.wordpress.com)
 * [Dan Kohn&apos;s LabVolt 5100](http://www.dankohn.info/projects/armdroid.html)
 
+## Component Datasheets
+
+* [2N3771 NPN transistor]({attach}datasheets/2N3771-npn-transistor.pdf)
+* [74LS175 voltage regulator]({attach}datasheets/LM723CN-voltage-regulator.pdf)
+* [74LS175 D flip-flop]({attach}datasheets/74LS175-d-flip-flop.pdf)
+* [ULN2003A Darlington array]({attach}datasheets/ULN2003A-darlington-array.pdf)
+* [LM340 / LM7805 5V regulator]({attach}datasheets/LM340-5V-regulator.pdf)
+* [74LS123 monostable multivibrator]({attach}datasheets/74LS123-monostable-multivibrator.pdf)
+* [74LS138 3-to-8 demultiplexer]({attach}datasheets/74LS138-demultiplexer.pdf)
+* [74LS125 tristae buffer]({attach}datasheets/74LS125-tristate-buffer.pdf)
+
 ## Miscellaneous resources
 
 Dan Kohn has done the work of reverse-engineering part of the circuit of his 5100. You can find it [here](http://dankohn.info/projects/armdroid_1000/schematic.pdf) ([local copy]({attach}dankohn_schematic.pdf))
