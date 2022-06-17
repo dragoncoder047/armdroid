@@ -16,7 +16,7 @@ Here's all the power connectors on the base:
 %%% figure
     ![base connectors]({attach}start/front.png)
 
-    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/).
+    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/). AFAIK, that pinout is correct. However, **the "accessory inputs" annotations are all WRONG**. The ones I have marked "accessory outputs" are indeed outputs and are driven by the same driver IC as the stepper motors, so they can do the same 380 mA as the motors at the 12V or whatever that is supplied. **The ones marked "accessory inputs" are NOT inputs. They are lower power logic outputs (0-5V, 20 mA).**
 
 The fourth accessory output is mounted on the shoulder.
 
@@ -68,7 +68,7 @@ The intact Armdroid (serial number 1105) had the two-finger claw on it. The brok
 
 ## Circuitry
 
-The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant bidirectional demultiplexer that routes the control signals to the right motor and read out the accessory inputs.
+The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant demultiplexer that routes the control signals to the right motor or output.
 
 %%% figure
     ![circuit top]({attach}start/circuits/circuit_top.png)

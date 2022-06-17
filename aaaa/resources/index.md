@@ -31,7 +31,7 @@ As far as I know, the only difference between the Armdroid 1000 and the LabVolt 
 * [LM340 / LM7805 5V regulator]({attach}datasheets/LM340-5V-regulator.pdf)
 * [74LS123 monostable multivibrator]({attach}datasheets/74LS123-monostable-multivibrator.pdf)
 * [74LS138 3-to-8 demultiplexer]({attach}datasheets/74LS138-demultiplexer.pdf)
-* [74LS125 tristae buffer]({attach}datasheets/74LS125-tristate-buffer.pdf)
+* [74LS125 tristate buffer]({attach}datasheets/74LS125-tristate-buffer.pdf)
 
 ## Miscellaneous resources
 
