@@ -25,7 +25,7 @@ Pulling the capacitor out of the clamp allowed me to get a shot of the underside
 
     %: The large capacitor looks like it is rated for 25V, but when I turned on the power supply it charged up to 60V. I'm proably not reading that label right.
 
-Here's a zoomed in shot of the circuit board. In the center is a [LM723CN](../resources/datasheets/LM723CN-voltage-regulator.pdf) power regulator.
+Here's a zoomed in shot of the circuit board. In the socket is a [LM723CN](../resources/datasheets/LM723CN-voltage-regulator.pdf) power regulator, on the heatsink a [TIP29](../resources/datasheets/TIP29-TIP30-transistor.pdf) NPN transistor, and the third thing is a [2N6509](../resources/datasheets/2N650x-scr.pdf) thyristor.
 
 %%% figure
     ![details]({attach}start/power/power_circuit_detail.png)
