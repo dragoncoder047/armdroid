@@ -5,7 +5,8 @@ The power supply that came with the Armdroid was just a big black box that weigh
 
 %%% figure
     ![big black box]({attach}start/power/power_front.jpg)
-    It's pretty dusty, I guess, because it doesn't work.
+
+    %: It's pretty dusty, I guess, because it doesn't work.
 
 The back of the power supply is dominated by a large heatsink containing two [2N3771](../resources/datasheets/2N3771-npn-transistor.pdf) power NPN transistors.
 
