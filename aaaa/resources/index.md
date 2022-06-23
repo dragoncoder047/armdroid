@@ -26,6 +26,8 @@ As far as I know, the only difference between the Armdroid 1000 and the LabVolt 
 
 * [2N3771 NPN transistor]({attach}datasheets/2N3771-npn-transistor.pdf)
 * [74LS175 voltage regulator]({attach}datasheets/LM723CN-voltage-regulator.pdf)
+* [TIP29 NPN transistor]({attach}datasheets/TIP29-TIP30-transistor.pdf)
+* [2N6509 thyristor]({attach}datasheets/2N650x-scr.pdf)
 * [74LS175 D flip-flop]({attach}datasheets/74LS175-d-flip-flop.pdf)
 * [ULN2003A Darlington array]({attach}datasheets/ULN2003A-darlington-array.pdf)
 * [LM340 / LM7805 5V regulator]({attach}datasheets/LM340-5V-regulator.pdf)
