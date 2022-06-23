@@ -3,7 +3,9 @@ Status: hidden
 
 The power supply that came with the Armdroid was just a big black box that weighs about five pounds with a switch on the front and two banana jacks on the back. I plugged it in and tested it one day - something is broken, because no power came out the banana jacks.
 
-I took a picture of the front of the power supply, but I lost it. If I find it, I will put it here and edit this out.
+%%% figure
+    ![big black box]({attach}start/power/power_front.jpg)
+    It's pretty dusty, I guess, because it doesn't work.
 
 The back of the power supply is dominated by a large heatsink containing two [2N3771](../resources/datasheets/2N3771-npn-transistor.pdf) power NPN transistors.
 
