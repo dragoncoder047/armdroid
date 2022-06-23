@@ -16,7 +16,7 @@ The Armdroid 1000 is about two feet tall at its tallest, and weighs about eight 
 
 The Armdroid 1000's base contains no microprocessor - all the circuit does is demultiplex the signals from an eight-bit serial port into the six motors. The software implements the control signal generation.
 
-The Armdroid 1000 also includes four digital sensor inputs mounted on the base, four accessory outputs (three on the base and one on the shoulder), and a seventh accessory motor output connector (5-pin GX-16) on the base.
+The Armdroid 1000 also includes four low-power (0-5V TTL) outputs mounted on the base, four high-power outputs (three on the base and one on the shoulder), and a seventh accessory motor output connector (5-pin GX-16) on the base.
 
 ## Power
 

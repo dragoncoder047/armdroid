@@ -16,7 +16,7 @@ Here's all the power connectors on the base:
 %%% figure
     ![base connectors]({attach}start/front.png)
 
-    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/). AFAIK, that pinout is correct. However, **the "accessory inputs" annotations are all WRONG**. The ones I have marked "accessory outputs" are indeed outputs and are driven by the same driver IC as the stepper motors, so they can do the same 380 mA as the motors at the 12V or whatever that is supplied. **The ones marked "accessory inputs" are NOT inputs. They are lower power logic outputs (0-5V, 20 mA).**
+    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/).
 
 The fourth accessory output is mounted on the shoulder.
 
@@ -76,7 +76,7 @@ The circuit board inside contains a bunch of microchips in sockets (most from th
 
 Dan Kohn has done the work of figuring out the general schematic of the circuit inside (although his pinout of the DB9 connector differs from the one I found above). You can find his schematic [here](http://dankohn.info/projects/armdroid_1000/schematic.pdf) (and if that goes down, there's a link to a local copy [here]({filename}../resources/index.md)). His part numbers differ slightly, but they're just different companies' takes of the same functional component.
 
-There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The inputs are wired to their own plug.
+There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The low power outputs are wired to their own plug.
 
 %%% figure
     ![inside base]({attach}start/inside_base.png)
