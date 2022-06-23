@@ -16,14 +16,14 @@
 
     <meta property="og:site_name" content="Armdroid 1000" />
     <meta property="og:title" content="Armdroid 1000 - Images" />
-    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. AFAIK, that pinout …" />
+    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="page" />
     <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/p/images/index.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Armdroid 1000 - Images" />
-    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. AFAIK, that pinout …" />
+    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
     
     </head>
@@ -58,7 +58,7 @@
 <p>Here&rsquo;s all the power connectors on the base:</p>
 <figure class="figure">
 <p><img alt="base connectors" src="https://dragoncoder047.github.io/armdroid/p/images/start/front.png"></p>
-<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>. AFAIK, that pinout is correct. However, <strong>the &ldquo;accessory inputs&rdquo; annotations are all WRONG</strong>. The ones I have marked &ldquo;accessory outputs&rdquo; are indeed outputs and are driven by the same driver IC as the stepper motors, so they can do the same 380 mA as the motors at the 12V or whatever that is supplied. <strong>The ones marked &ldquo;accessory inputs&rdquo; are NOT inputs. They are lower power logic outputs (0-5V, 20 mA).</strong></figcaption>
+<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>.</figcaption>
 </figure>
 <p>The fourth accessory output is mounted on the shoulder.</p>
 <figure class="figure">
@@ -102,7 +102,7 @@
 <img alt="circuit bottom" src="https://dragoncoder047.github.io/armdroid/p/images/start/circuits/circuit_bottom.png"></p>
 </figure>
 <p>Dan Kohn has done the work of figuring out the general schematic of the circuit inside (although his pinout of the DB9 connector differs from the one I found above). You can find his schematic <a href="http://dankohn.info/projects/armdroid_1000/schematic.pdf">here</a> (and if that goes down, there&rsquo;s a link to a local copy <a href="https://dragoncoder047.github.io/armdroid/p/resources/index.html">here</a>). His part numbers differ slightly, but they&rsquo;re just different companies&rsquo; takes of the same functional component.</p>
-<p>There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The inputs are wired to their own plug.</p>
+<p>There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The low power outputs are wired to their own plug.</p>
 <figure class="figure">
 <p><img alt="inside base" src="https://dragoncoder047.github.io/armdroid/p/images/start/inside_base.png"></p>
 <figcaption><strong>Man</strong>, those wires are twisted up.</figcaption>
