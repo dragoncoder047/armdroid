@@ -37,7 +37,11 @@ SEO_REPORT = True
 
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
-AUTHOR_SAVE_AS = AUTHORS_SAVE_AS = TAG_SAVE_AS = TAGS_SAVE_AS = CATEGORY_SAVE_AS = CATEGORIES_SAVE_AS = ARCHIVES_SAVE_AS = ''
+AUTHOR_SAVE_AS = AUTHORS_SAVE_AS = TAG_SAVE_AS = TAGS_SAVE_AS = CATEGORY_SAVE_AS = CATEGORIES_SAVE_AS = ''
+ARTICLE_SAVE_AS = ARTICLE_URL = 'updates/{date:%Y}/{slug}.html'
+ARCHIVES_SAVE_AS = 'updates/archive.html'
+PATH_METADATA = r'(?P<path_no_ext>.*)\.[^.]*'
+PAGE_URL = PAGE_SAVE_AS = '{path_no_ext}.html'
 FILENAME_METADATA = ''
 
 # Blogroll
@@ -55,6 +59,7 @@ SOCIAL = (
 
 MENUITEMS = (
     ('Site root', '/'),
+    ('Updates Archive', '/armdroid/updates/archive.html'),
 )
 
 DEFAULT_PAGINATION = 10
@@ -64,11 +69,8 @@ PAGINATION_PATTERNS = (
     (2, '{name}_{number}{extension}', '{name}_{number}{extension}'),
 )
 
-PATH_METADATA = r'(?P<path_no_ext>.*)\.[^.]*'
-PAGE_URL = PAGE_SAVE_AS = 'p/{path_no_ext}.html'
-
-PAGE_PATHS = ['']
-ARTICLE_PATHS = [] # they are all pages
+PAGE_PATHS = ['info/']
+ARTICLE_PATHS = ['updates/']
 STATIC_PATHS = [] # everything is attached
 
 THEME = './pelicantheme'
