@@ -26,8 +26,8 @@ jobs:
           python3 -m pip install -r requirements.txt
       - name: build
         run: python3 build.py
-      - name: list built files in p/ directory
-        run: ls -lr p/
+      - name: list built files in info/ directory
+        run: ls -lr info/
       - name: commit changes # copied from ad-m/github-push-action
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
