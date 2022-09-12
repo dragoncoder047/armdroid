@@ -13,7 +13,7 @@ Today I revisited why the conveyor belt's board couldn't drive the other motors.
    ||||   |    |
    ||||||||    |
  +-+++++++++   |
- ) driver  |   |
+ )  chip   |   |
  +-+++++++++   |
    ||||||||    *-----o +12V
    ||||    '---|-----o GND
