@@ -2,8 +2,6 @@ Title: Armdroid 1000
 Status: hidden
 Save_as: index.html
 
-**Currently the only thing that is on this site is photos and links to external resources, however, this will likely be updated in the fall whan I get back from summer break.**
-
 In early 2022 I found two old Armdroid 1000's plus some of their accessories in the back of my engineering teacher's storage closet. Thus began an investigation into the history, mechanics, electronics, and software of the Armdroid 1000. This site curates the result.
 
 ## Overview
