@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en_us">
     <head>
-                <title>Armdroid 1000 - Motor Test</title>
+                <title>Armdroid 1000 - Chip Confusion</title>
             <meta charset="utf-8" />
             <meta name="generator" content="Pelican" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,15 +17,15 @@
 
 
     <meta property="og:site_name" content="Armdroid 1000" />
-    <meta property="og:title" content="Armdroid 1000 - Motor Test" />
-    <meta property="og:description" content="After my investigation with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way. I took the accessory motor …" />
+    <meta property="og:title" content="Armdroid 1000 - Chip Confusion" />
+    <meta property="og:description" content="Today I revisited why the conveyor belt’s board couldn’t drive the other motors. Instead of relying on the obviously-not-working board from the conveyor belt, I pried the chip with the heatsink from its socket and plugged it into a breadboard. Here’s the circuit diagram I used: I …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html" />
+    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2022/chip-confusion.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Armdroid 1000 - Motor Test" />
-    <meta name="twitter:description" content="After my investigation with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way. I took the accessory motor …" />
+    <meta name="twitter:title" content="Armdroid 1000 - Chip Confusion" />
+    <meta name="twitter:description" content="Today I revisited why the conveyor belt’s board couldn’t drive the other motors. Instead of relying on the obviously-not-working board from the conveyor belt, I pried the chip with the heatsink from its socket and plugged it into a breadboard. Here’s the circuit diagram I used: I …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
     
     </head>
@@ -53,30 +53,41 @@
             </nav>
         </header>
         <main>
-    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html" rel="bookmark" title="Permalink to this page">Motor Test</a></h1>
+    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2022/chip-confusion.html" rel="bookmark" title="Permalink to this page">Chip Confusion</a></h1>
     
     <div class="post-info">
-        Posted <time class="published" datetime="2022-04-27T00:00:00-04:00">Wed 27 April 2022</time>
+        Posted <time class="published" datetime="2022-09-12T00:00:00-04:00">Mon 12 September 2022</time>
             <address>By
                     <a href="https://dragoncoder047.github.io/armdroid/author/dragoncoder047.html">dragoncoder047</a>
             </address>
                 <div class="category">Category: <a href="https://dragoncoder047.github.io/armdroid/category/misc.html">misc</a></div>
     </div>
-        <p><em>This post is part 2 of the testing series:</em></p>
+        <p><em>This post is part 3 of the testing series:</em></p>
         <ol class="series">
                 <li >
                     <a href='https://dragoncoder047.github.io/armdroid/updates/2022/investigation.html'>Investigation</a>
                 </li>
-                <li class="active">
+                <li >
                     <a href='https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html'>Motor Test</a>
                 </li>
-                <li >
+                <li class="active">
                     <a href='https://dragoncoder047.github.io/armdroid/updates/2022/chip-confusion.html'>Chip Confusion</a>
                 </li>
         </ol>
-    <p>After my <a href="https://dragoncoder047.github.io/armdroid/updates/2022/investigation.html">investigation</a> with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way.</p>
-<p>I took the accessory motor port out of the broken Armdroid and used it to connect the turntable followed by the screw slider to the conveyor belt&rsquo;s control board. And the weird thing was, no matter how I set the switches on the control panel, (fast/medium/slow, forward/reverse, etc) the motors would just refuse to run. They just made the same &ldquo;d-d-d-d-d-d-d-d-d-d-d-d&rdquo; sound like they were trying to move.</p>
-<p>I double checked all the connections, and they were okay. I double checked the <del>ULN2003A</del> (EDIT: that was an incorrect assumtion!), and it had all of its pins in its socket (and was getting quite hot, thus the heatsink). There&rsquo;s clearly something I am missing.</p>
+    <p>Today I revisited why the conveyor belt&rsquo;s board couldn&rsquo;t drive the other motors. Instead of relying on the obviously-not-working board from the conveyor belt, I pried the chip with the heatsink from its socket and plugged it into a breadboard. Here&rsquo;s the circuit diagram I used:</p>
+<p><img src="https://kroki.io/svgbob/svg/eNpTUNDWBQFtLgWFmgCfUHeFGiBLGwKALIUaEIAxFNR1tYCK9eB8IKUAIuAqIYIgAW1dbRiACGgqpBRllqUWQfRgU4FqhhbYYfkK2oZGYUgWAt2gq1sDlXP3cwFJ5QOBAhSAzUEBQA36MUAIdbhCDJq8sbEBkkZ1XSxAHQCqyT5A" /></p>
+<p>I manually touched the loose end of wire coming out of the resistor to the four terminals of the driver chip in turn, to make the motor rotate.</p>
+<p>Unfortunately, this didn&rsquo;t work!</p>
+<p>At least, now I knew that the specifics of this chip and/or how the motor was wired were why it only worked with one motor (the one it was originally wired to run).</p>
+<p>I dug out the circuit board of the Armdroid itself and had a look at how it was wired. On a hunch that one of the individual drivers in the conveyor&rsquo;s chip were faulty, I replaced the one on the breadboard with a confirmed UL2003A from the Armdroid board.</p>
+<p>And this is when I noticed a subtle but important difference.</p>
+<p>Having a look at the side of the two chips (where the pins come out) I noticed that on the unknown chip from the conveyor&rsquo;s board, the middle two pins were joined, but on the confirmed ULN2003A they were not:</p>
+<p>ULN2003A (with heatsink):</p>
+<p><img src="https://kroki.io/svgbob/svg/eNq9kbENwEAIA3umcPeFBVkoo_zwgWSC-yIgTjSWZagsFZzYwn2iGaOVC80OJy23D60JNE4G_I4gIXaedwN0CPucSXTrIgya_k-J-0WAD1Vrr5Y=" /></p>
+<p>Unknown chip:</p>
+<p><img src="https://kroki.io/svgbob/svg/eNrT09VT0CMRc9UokAzJ0QOySF1XnSRcw6WtSyrQBtpDKgB5CGSTNgYJNROLLCQQFBQwSW2gLDbxGrB_wCwSSG0uBRz24CbJ06IQo6BPCslFohU19NQCiQSiSQB4hK8S" /></p>
+<p>Obviously, now, the chip on the conveyor board is <em>not</em> a ULN2003A! I na&iuml;vely assumed that it was the same, and I was wrong.</p>
+<p>My guess is that the unknown chip is an <a href="armdroid/info/resources/datasheets/L6220-darlington-switches.pdf">L6220</a>, which conveniently contains two inverted and two uninverted outputs, perfect for driving a unipolar stepper motor with two quadrature signals (which are easily generated by two D-flip-flops wired into each other). Unfortunately I&rsquo;ll never know for sure because the heat sink is obscuring the part number.</p>
             <section id="extras">
                     <div class="blogroll">
                         <ul>
