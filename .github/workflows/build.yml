@@ -2,6 +2,8 @@ name: build site using Pelican
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - code/
 jobs:
   build-main:
     runs-on: ubuntu-latest
