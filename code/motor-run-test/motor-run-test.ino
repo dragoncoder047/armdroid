@@ -6,7 +6,6 @@
 
 #define CTL A0
 
-#define ANALOG_MAX 1023
 #define MAPF(x, il, ih, ol, oh) (((x)-(il))*((oh)-(ol))/((ih)-(il))+(ol))
 
 const unt8_t steps[8] = {
@@ -29,7 +28,7 @@ void setup() {
 }
 void loop() {
     // update index
-    if (analogRead(CTL) < (ANALOG_MAX / 2)) index = (index + 1) & 7; // &7 same as %8 but faster
+    if (analogRead(CTL) < (1023 / 2)) index = (index + 1) & 7; // &7 same as %8 but faster
     else                                    index = (index + 7) & 7; // +7 is equivalent to -1 in mod-8
 
     // update pins
@@ -43,6 +42,6 @@ void loop() {
     // Math here: 1000000 us   / 400 half-steps   X turns \    X us
     //            ---------- / | -------------- x ------- | == ----
     //               sec       \      turn          sec   /    step
-    int32_t delay_amount = (1000000L / 400) / MAPF(analogRead(CTL), 0, ANALOG_MAX, -10, 10);
+    int32_t delay_amount = (1000000L / 400) / (int32_t)MAPF((float)analogRead(CTL), 0, 1023.0, -10.0, 10.0);
     delayMicroseconds(abs(delay_amount));
 }
