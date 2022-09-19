@@ -10,7 +10,7 @@
 
 #define ENABLE_FULL_STEPPING
 
-const unt8_t steps[8] = {
+const uint8_t steps[8] = {
     0b0001,
     0b0011,
     0b0010,
