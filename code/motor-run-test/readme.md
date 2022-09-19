@@ -4,4 +4,6 @@ Connect pins 3, 4, 5, and 6 of the Arduino (or whatever you choose, edit the `#d
 
 Connect the remaining (rightmost) pin of the motor plug, pin 9 of the ULN2003A ("flybacks common cathode"), and the Arduino's VIN pin to +12V, and the Arduino ground to pin 8 of the ULN2003A and power supply ground.
 
-Pin A0 is the control voltage which affects the motor speed and direction. Connecting it to GND will try to run the motor at 600 RPM backwards, while +5V will try to run it at 600 RPM forwards. You can use a potetntionmeter to vary the speed in-between.
+Pin A0 is the control voltage which affects the motor speed and direction. Connecting it to GND will try to run the motor at 120 RPM backwards, while +5V will try to run it at 120 RPM forwards. You can use a potetntionmeter to vary the speed in-between.
+
+The motor struggles to run at speeds greater than 180 RPM reliably.
