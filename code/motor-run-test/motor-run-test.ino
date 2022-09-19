@@ -40,15 +40,20 @@ void loop() {
     if (lastStep + delay_amount >= mi) {
         lastStep = mi;
         step(speed > 0);
+        if (delay_amount < 1000) { // Do full steps for speed > 1 kHz
+            lastStep += delay_amount / 2; // account for increased speed speed
+            step(speed > 0);
+        }
+        updatePins();
     }
 }
 
 void step(bool forward) {
-    // update index
     if (forward) index = (index + 1) & 7; // &7 same as %8 but faster
     else         index = (index + 7) & 7; // +7 is equivalent to -1 in mod-8
+}
 
-    // update pins
+void updatePins(void) {
     uint8_t s = steps[index];
     digitalWrite(PA, s & 0b0001);
     digitalWrite(PB, s & 0b0010);
