@@ -8,6 +8,8 @@
 
 #define MAPF(x, il, ih, ol, oh) (((x)-(il))*((oh)-(ol))/((ih)-(il))+(ol))
 
+#define ENABLE_FULL_STEPPING
+
 const unt8_t steps[8] = {
     0b0001,
     0b0011,
@@ -40,10 +42,12 @@ void loop() {
     if (lastStep + delay_amount >= mi) {
         lastStep = mi;
         step(speed > 0);
+#if defined(ENABLE_FULL_STEPPING)
         if (delay_amount < 1000) { // Do full steps for speed > 1 kHz
             lastStep += delay_amount / 2; // account for increased speed speed
             step(speed > 0);
         }
+#endif
         updatePins();
     }
 }
