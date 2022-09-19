@@ -36,10 +36,10 @@ void loop() {
     // Math here: 1000000 us   / 400 half-steps   X turns \    X us
     //            ---------- / | -------------- x ------- | == ----
     //               sec       \      turn          sec   /    step
-    int64_t speed = (1000000L / 400) / (int32_t)MAPF((float)val, 0, 1023.0, -10.0, 10.0);
+    int64_t speed = (1000000L / 40) / (int64_t)MAPF((float)val, 0, 1023.0, -20.0, 20.0);
     uint64_t delay_amount = abs(speed); // abs is a macro; let's save some calculations
     uint64_t mi = micros();
-    if (lastStep + delay_amount >= mi) {
+    if ((lastStep + delay_amount) < mi) {
         lastStep = mi;
         step(speed > 0);
 #if defined(ENABLE_FULL_STEPPING)
