@@ -44,7 +44,7 @@ void loop() {
         step(speed > 0);
 #if defined(ENABLE_FULL_STEPPING)
         if (delay_amount < 1000) { // Do full steps for speed > 1 kHz
-            lastStep += delay_amount / 2; // account for increased speed speed
+            lastStep += delay_amount; // account for increased speed speed
             step(speed > 0);
         }
 #endif
