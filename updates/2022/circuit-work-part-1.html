@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en_us">
+    <head>
+                <title>Armdroid 1000 - Circuit Work, part 1</title>
+            <meta charset="utf-8" />
+            <meta name="generator" content="Pelican" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="/static/css/main.css" />
+            <link rel="stylesheet" href="/armdroid/theme.css" />
+                    <link rel="icon" href="/armdroid/armdroid_sm.png" type="image/png" />
+                    <link rel="apple-touch-icon" href="/armdroid/armdroid_sm.png" type="image/png" />
+
+
+
+    
+
+
+    <meta property="og:site_name" content="Armdroid 1000" />
+    <meta property="og:title" content="Armdroid 1000 - Circuit Work, part 1" />
+    <meta property="og:description" content="Todat I started to work out the circuit of the small control board in the conveyor belt, beofre I tackled the larger circuit board in the Armdroid itself. First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide …" />
+    <meta property="og:image" content="/armdroid/armdroid.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html" />
+    <meta property="og:locale" content="['']" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Armdroid 1000 - Circuit Work, part 1" />
+    <meta name="twitter:description" content="Todat I started to work out the circuit of the small control board in the conveyor belt, beofre I tackled the larger circuit board in the Armdroid itself. First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide …" />
+    <meta name="twitter:image" content="/armdroid/armdroid.png" />
+    
+    </head>
+
+    <body class="match-braces rainbow-braces">
+        <header>
+                <a href="/armdroid"><div class="flex-row"><img src="/armdroid/armdroid.png" width="145" height="115" /><div id="sitename-text" class="flex-column"><h1>Armdroid 1000</h1><!-- h2>SITESUBTITLE</h2 --></div></div></a>
+            <nav>
+                <ul>
+                    <li><a href="https://dragoncoder047.github.io/armdroid/">Home</a></li>
+                        <li><a href="/">Site root</a>
+                        </li>
+                        <li><a href="/armdroid/updates/archive.html">Updates Archive</a>
+                        </li>
+                            <li><a href="https://dragoncoder047.github.io/armdroid/info/images/index.html">Images</a></li>
+                            <li><a href="https://dragoncoder047.github.io/armdroid/info/resources/index.html">Resources</a></li>
+                    <li>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input name="q" type="search" placeholder="Search"></input>
+                            <input type="hidden" name="as_sitesearch" value="https://dragoncoder047.github.io/armdroid"></input>
+                            <input type="submit" value="Search"></input>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html" rel="bookmark" title="Permalink to this page">Circuit Work, part 1</a></h1>
+    
+    <div class="post-info">
+        Posted <time class="published" datetime="2022-09-21T00:00:00-04:00">Wed 21 September 2022</time>
+            <address>By
+                    <a href="https://dragoncoder047.github.io/armdroid/author/dragoncoder047.html">dragoncoder047</a>
+            </address>
+                <div class="category">Category: <a href="https://dragoncoder047.github.io/armdroid/category/misc.html">misc</a></div>
+    </div>
+        <p><em>This post is part 1 of the circuit-work series:</em></p>
+        <ol class="series">
+                <li class="active">
+                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html'>Circuit Work, part 1</a>
+                </li>
+        </ol>
+    <p>Todat I started to work out the circuit of the small control board in the conveyor belt, beofre I tackled the larger circuit board in the Armdroid itself.</p>
+<p>First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide, as the motor is very power-hungry:</p>
+<p><img alt="power supply" src="https://dragoncoder047.github.io/armdroid/updates/2022/power_supply_circuit.png"></p>
+<p>This is just a standard LM7805-or-equivalent DC power supply circuit. The 12 volts AC is rectified and fed into the buffer capacitor, and it is then regulated down by a low-value resistor and a linear regulator to 5 volts for the logic circuits.</p>
+<p>Next is the 555 timer clock circuit:</p>
+<p><img alt="clock" src="https://dragoncoder047.github.io/armdroid/updates/2022/555_clock_circuit.png"></p>
+<p>Again, this is a very common circuit to generate a clock signal. The chosen values for the resistors cause the circuit to oscillate at 47 Hz for low speed (only R4 connected), 168 Hz for medium speed (R3 &amp; R4 in parallel) and 252 Hz for high (R2 &amp; R4 in parallel), according to the Falstad simulator.</p>
+<p>I have not been able to work out the circuit of the latches and motor driver yet. It&rsquo;s hard because some of the traces are hidden under the IC sockets. Hopefully I will figure it out soon.</p>
+            <section id="extras">
+                    <div class="blogroll">
+                        <ul>
+                                <li><a href="https://armdroid1000.wordpress.com">Armdroid 1000 site</a></li>
+                                <li><a href="http://www.dankohn.info/projects/armdroid.html">Dan Kohn&apos;s LabVolt 5100</a></li>
+                                <li><a href="https://armdroid1.blogspot.com/">Richard Morris&apos; Armdroid 1</a></li>
+                                <li><a href="http://www.senster.com/alex_zivanovic/armdroid/index.htm">Alex Zivanovic&apos;s Armdroid 1</a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+
+                                <li><a href="https://github.com/dragoncoder047">dragoncoder047 on GitHub</a></li>
+                        </ul>
+                    </div>
+            </section>
+        </main>
+        <footer>
+            <address>
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, and hosted by <a href="https://pages.github.com/">GitHub Pages</a>.
+            </address>
+            <a href="#" onclick="window.scrollTo({top: 0, left: 0});">Back to top</a>
+        </footer>
+    </body>
+</html>
