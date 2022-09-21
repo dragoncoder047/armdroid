@@ -2,7 +2,7 @@ Title: Circuit Work, part 1
 Series: circuit-work
 Date: 2022-09-21
 
-Todat I started to work out the circuit of the small control board in the conveyor belt, before I tackled the larger circuit board in the Armdroid itself. There are pictures of this circuit board on the [conveyor images page]({file}../info/images/conveyor.md).
+Todat I started to work out the circuit of the small control board in the conveyor belt, before I tackled the larger circuit board in the Armdroid itself. There are pictures of this circuit board on the [conveyor images page]({filename}../info/images/conveyor.md).
 
 First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide, as the motor is very power-hungry:
 
