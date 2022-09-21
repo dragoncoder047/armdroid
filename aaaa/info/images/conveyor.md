@@ -21,7 +21,7 @@ Inside the control box you can see the toroidal transformer in the back, the ste
 %%% figure
     ![circuit top]({attach}start/conveyor/conveyor_board_front.png)
 
-    %: The heatsunk one is a [L6220](../resources/datasheets/L6220-darlington-switches.pdf) Darlington switch (I think?) that runs the motor, while the other large chip is a [74LS175](../resources/datasheets/74LS175-d-flip-flop.pdf) quad D flip-flop with the flops wired into each other to count the pulses from the oscillator and turn it into control signals for the motor. The small 8-pin microchip (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer wired in astable mode.
+    %: U1 is an [L6220](../resources/datasheets/L6220-darlington-switches.pdf) Darlington switch (I think?) that runs the motor. U2 is a 74LS08 quad AND gate, but I don't know how that could be used to generate a quadrature signal. My guess is it is a [74LS175](../resources/datasheets/74LS175-d-flip-flop.pdf) quad D flip-flop that got mislabeled. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.
 
 Someone had ~~green~~ yellow-wired the back of the circuit board to fix a routing error.
 
