@@ -71,7 +71,7 @@
 </figure>
 <figure class="figure">
 <p><img alt="circuit top" src="https://dragoncoder047.github.io/armdroid/info/images/start/conveyor/conveyor_board_front.png"></p>
-<figcaption>U1 is an <a href="../resources/datasheets/L6220-darlington-switches.pdf">L6220</a> Darlington switch (I think?) that runs the motor. U2 is a 74LS08 quad AND gate, but I don&rsquo;t know how that could be used to generate a quadrature signal. My guess is it is a <a href="../resources/datasheets/74LS175-d-flip-flop.pdf">74LS175</a> quad D flip-flop that got mislabeled. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.</figcaption>
+<figcaption>I do not know what U1 is. I pried off the heatsink, and from what I could make out the part number is UCN4204B. U2 is a 74LS08 quad AND gate, one being used to gate the clock signal. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.</figcaption>
 </figure>
 <p>Someone had <del>green</del> yellow-wired the back of the circuit board to fix a routing error.</p>
 <figure class="figure">
@@ -81,7 +81,7 @@
 <p>The back of the control panel contains some point-to-point wiring to connect all the banana jacks and switches to the ribbon cable from the main circuit board.</p>
 <figure class="figure">
 <p><img alt="conveyor control board wiring" src="https://dragoncoder047.github.io/armdroid/info/images/start/conveyor/conveyor_control_wiring.png"></p>
-<figcaption>I have no idea how this is wired up. And I really don&rsquo;t know what the 10&micro;F capacitor is for &ndash; debouncing, perhaps?</figcaption>
+<figcaption>The direction, clock enable, and motor power enable switches are wired with the center pin connected to the input of a control signal (pulled up by a 10k&ohm; resistor on the board) with one side connected to ground and the other connected to the banana jacks next to the switch to allow remote control by shorting the two jacks to each other with a relay. I really don&rsquo;t know what the 10&micro;F capacitor is for &ndash; debouncing, perhaps?</figcaption>
 </figure>
             <section id="extras">
                     <div class="blogroll">
