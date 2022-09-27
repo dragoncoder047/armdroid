@@ -21,7 +21,7 @@ Inside the control box you can see the toroidal transformer in the back, the ste
 %%% figure
     ![circuit top]({attach}start/conveyor/conveyor_board_front.png)
 
-    %: U1 is an [L6220](../resources/datasheets/L6220-darlington-switches.pdf) Darlington switch (I think?) that runs the motor. U2 is a 74LS08 quad AND gate, but I don't know how that could be used to generate a quadrature signal. My guess is it is a [74LS175](../resources/datasheets/74LS175-d-flip-flop.pdf) quad D flip-flop that got mislabeled. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.
+    %: I do not know what U1 is. I pried off the heatsink, and from what I could make out the part number is UCN4204B. U2 is a 74LS08 quad AND gate, one being used to gate the clock signal. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.
 
 Someone had ~~green~~ yellow-wired the back of the circuit board to fix a routing error.
 
@@ -35,4 +35,4 @@ The back of the control panel contains some point-to-point wiring to connect all
 %%% figure
     ![conveyor control board wiring]({attach}start/conveyor/conveyor_control_wiring.png)
 
-    %: I have no idea how this is wired up. And I really don't know what the 10&micro;F capacitor is for -- debouncing, perhaps?
+    %: The direction, clock enable, and motor power enable switches are wired with the center pin connected to the input of a control signal (pulled up by a 10k&ohm; resistor on the board) with one side connected to ground and the other connected to the banana jacks next to the switch to allow remote control by shorting the two jacks to each other with a relay. I really don't know what the 10&micro;F capacitor is for -- debouncing, perhaps?

@@ -7,7 +7,7 @@ Todat I started to work out the circuit of the small control board in the convey
 First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide, as the motor is very power-hungry:
 
 ![power supply]({attach}power_supply_circuit.png)
-    
+
 This is just a standard LM7805-or-equivalent DC power supply circuit. The 12 volts AC is rectified and fed into the buffer capacitor, and it is then regulated down by a low-value resistor and a linear regulator to 5 volts for the logic circuits.
 
 Next is the 555 timer clock circuit:

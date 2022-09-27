@@ -1,6 +1,7 @@
 Title: Investigation
 Date: 2022-04-22
 Series: testing
+Modified: 2022-09-23
 
 A couple days ago it finally dawned on me that I hadn't tested the power supply inside the [conveyor belt](/armdroid/page/images/conveyor.html) that came with the Armdroid. So I plugged everything together and turned it on.
 
@@ -10,6 +11,6 @@ Today I pulled the little circuit board off the plastic standoffs it was attache
 
 After fixing the chip's pin, the motor ran just fine. On "high" it ran about 60 RPM (and with 200 steps per revolution, that's 200 Hz for the clock if each step takes one oscillation of the clock), on "medium" it ran about 40 RPM, and "low" was 20 RPM (3 seconds per revolution).
 
-Pulling the board out of its enclosure also allowed me to get a look at the chips on it. And it turns out my hunch was right -- the small 8-pin chip was indeed a 555 timer, ~~the heatsunk chip was the same ULN2003A quad Darlington switch used in the Armdroid itself~~ (EDIT 9/12/22: Nope, I was wrong!), and the third one is a 74LS175 quad D flip-flop that I assume is wired into itself to turn the pulses from the 555 into quadrature control signals for the motor. I updated the conveyor's page on the Armdroid website to actually list these part numbers instead of just my hunch.
+Pulling the board out of its enclosure also allowed me to get a look at the chips on it. And it turns out my hunch was right -- the small 8-pin chip was indeed a 555 timer, ~~the heatsunk chip was the same ULN2003A quad Darlington switch used in the Armdroid itself~~ (EDIT 9/12/22: Nope, I was wrong!), and ~~the third one is a 74LS175 quad D flip-flop that I assume is wired into itself to turn the pulses from the 555 into quadrature control signals for the motor~~ (EDIT 9/23/22: I was wrong again!). I updated the conveyor's page on the Armdroid website to actually list these part numbers instead of just my hunch.
 
 See how much you can learn when you *actually look at stuff closely*? That's a lesson that I really need to learn.
