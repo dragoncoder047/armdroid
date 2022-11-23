@@ -20,6 +20,7 @@ void setup() {
 }
 void loop() {
     arm.tick();
+    delay(10); // don't move the motors too fast
     long pos = 0;
     uint8_t motor = 255;
     if (Serial.available()) {
