@@ -11,6 +11,7 @@ const uint8_t PHASETAB[8] = {
     0b1001
 };
 
+// use an enum here ??
 #define BASE 0
 #define SHOULDER 1
 #define ELBOW 2
@@ -29,7 +30,7 @@ class Armdroid {
         uint8_t dividers[8];
         uint8_t counters[8];
     public:
-    Armdroid(a, b, c, d, x, y, z, k) {
+    Armdroid(uint8_t a, uint8_t b, uint8_t c, uint8_t d, uint8_t x, uint8_t y, uint8_t z, uint8_t k) {
         this->port[0] = a;
         this->port[1] = b;
         this->port[2] = c;
@@ -54,7 +55,7 @@ class Armdroid {
     }
     void tick() {
         // update phases
-        uint8_t #define changed_flags 0 motor;
+        uint8_t changed_flags = 0, motor = 0;
         for (motor = 0; motor < 8; motor++) {
             if (this->isStopped(motor)) {
                 this->counters[motor] = 0;
@@ -90,4 +91,4 @@ class Armdroid {
         digitalWrite(this->port[7], LOW);
         delayMicroseconds(10);
     }
-}
+};
