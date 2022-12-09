@@ -31,7 +31,7 @@ void loop() {
             c = Serial.peek();
         }
         for (i = 0; i < 8; i++) {
-            if (s[i] == c) {
+            if (s[i] == (c | 0x20)) { // allow uppercase or lowercase
                 motor = i;
                 break;
             }
