@@ -20,7 +20,7 @@ void setup() {
     pinMode(A4, INPUT);
     pinMode(A5, INPUT);
 }
-#define mmm(N) r = analogRead(A##N); if (abs(r - 512) > 50) arm.motorMoveby(N, analogRead(A##N) > 512 ? 2 : -2);
+#define mmm(N) r = analogRead(A##N); if (abs(r - 512) > 50) arm.motorMoveby(N, r > 512 ? 2 : -2);
 void loop() {
     arm.tick();
     delay(10); // don't move the motors too fast
