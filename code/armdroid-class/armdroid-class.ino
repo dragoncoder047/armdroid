@@ -23,6 +23,7 @@ void setup() {
 #define mmm(N) r = analogRead(A##N); if (abs(r - 512) > 50) arm.motorMoveby(N, r > 512 ? 2 : -2);
 void loop() {
     arm.tick();
+    arm.tick(); // tick twice to do full stepping
     delay(10); // don't move the motors too fast
     int r;
     mmm(0);
