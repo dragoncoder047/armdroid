@@ -44,6 +44,9 @@ class Armdroid {
     void motorGoto(uint8_t m, long pos) {
         this->target_positions[m] = pos;
     }
+    void motorMoveby(uint8_t m, long pos) {
+        this->target_positions[m] += pos;
+    }
     bool isStopped(uint8_t m) {
         return this->current_positions[m] == this->target_positions[m];
     }
@@ -90,5 +93,10 @@ class Armdroid {
         delayMicroseconds(10);
         digitalWrite(this->port[7], LOW);
         delayMicroseconds(10);
+    }
+    void torqueOff() {
+        for (uint8_t i = 0; i < 8; i++) {
+            this->writeToPort(i, 0);
+        }
     }
 };
