@@ -16,6 +16,7 @@ ICON = '/armdroid/armdroid_sm.png'
 ICON_MIMETYPE = 'image/png'
 THEME_CSS_FILE = '/armdroid/theme.css'
 THEME_MAIN_CSS = '/static/css/main.css'
+EXTRA_JS = '/static/misc.js'
 THEME_STATIC_DIR = 'static/'
 USE_FOLDER_AS_CATEGORY = False
 
