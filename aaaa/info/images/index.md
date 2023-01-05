@@ -16,7 +16,7 @@ Here's all the power connectors on the base:
 %%% figure
     ![base connectors]({attach}start/front.png)
 
-    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/).
+    %: I got the DB9 pinout from [here](https://armdroid1000.wordpress.com/control-protocol/), and subsequently confirmed it with a multimeter. The L input is active-low (?), all others are active-high.
 
 The fourth accessory output is mounted on the shoulder.
 
@@ -68,13 +68,15 @@ The intact Armdroid (serial number 1105) had the two-finger claw on it. The brok
 
 ## Circuitry
 
-The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant demultiplexer that routes the control signals to the right motor or output.
+The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that form a giant demultiplexer that routes the control signals to the right motor or output.
 
 %%% figure
     ![circuit top]({attach}start/circuits/circuit_top.png)
     ![circuit bottom]({attach}start/circuits/circuit_bottom.png)
 
 Dan Kohn has done the work of figuring out the general schematic of the circuit inside (although his pinout of the DB9 connector differs from the one I found above). You can find his schematic [here](http://dankohn.info/projects/armdroid_1000/schematic.pdf) (and if that goes down, there's a link to a local copy [here]({filename}../resources/index.md)). His part numbers differ slightly, but they're just different companies' takes of the same functional component.
+
+On my board, the inputs from the DB9 connector are first amplified by 74LS125 buffers so they can drive the large number of inputs. From the buffer, the select bits go to a 74LS138 3-to-8 converter. The latch bit goes to a 74LS123 monostable multivibrator that normalizes the pulse length and sends it to an enable input of the 74LS138, routing a clock pulse to the appropriate one of the eight 74LS175 D-latches to latch in the phase bits for that motor. The ULN2003As switch the high current needed for the motors.
 
 There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The low power outputs are wired to their own plug.
 
