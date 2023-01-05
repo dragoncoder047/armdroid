@@ -17,14 +17,14 @@
 
     <meta property="og:site_name" content="Armdroid 1000" />
     <meta property="og:title" content="Images" />
-    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
+    <meta property="og:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here, and subsequently confirmed …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="page" />
     <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/info/images/index.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Armdroid 1000 - Images" />
-    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here. The fourth accessory …" />
+    <meta name="twitter:description" content="This page contains the images I took of the two Armdroid units. The other accessories each have their own page: Conveyor belt Power supply unit Screw slider Turntable Base and Shoulder Here’s all the power connectors on the base: I got the DB9 pinout from here, and subsequently confirmed …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
     
     </head>
@@ -68,7 +68,7 @@
 <p>Here&rsquo;s all the power connectors on the base:</p>
 <figure class="figure">
 <p><img alt="base connectors" src="https://dragoncoder047.github.io/armdroid/info/images/start/front.png"></p>
-<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>.</figcaption>
+<figcaption>I got the DB9 pinout from <a href="https://armdroid1000.wordpress.com/control-protocol/">here</a>, and subsequently confirmed it with a multimeter. The L input is active-low (?), all others are active-high.</figcaption>
 </figure>
 <p>The fourth accessory output is mounted on the shoulder.</p>
 <figure class="figure">
@@ -106,12 +106,13 @@
 <figcaption>It&rsquo;s a shame the three-finger claw is broken. It would look really cool!</figcaption>
 </figure>
 <h2 id="circuitry">Circuitry</h2>
-<p>The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that, as far as I have found, form a giant demultiplexer that routes the control signals to the right motor or output.</p>
+<p>The circuit board inside contains a bunch of microchips in sockets (most from the 74LS series) that form a giant demultiplexer that routes the control signals to the right motor or output.</p>
 <figure class="figure">
 <p><img alt="circuit top" src="https://dragoncoder047.github.io/armdroid/info/images/start/circuits/circuit_top.png">
 <img alt="circuit bottom" src="https://dragoncoder047.github.io/armdroid/info/images/start/circuits/circuit_bottom.png"></p>
 </figure>
 <p>Dan Kohn has done the work of figuring out the general schematic of the circuit inside (although his pinout of the DB9 connector differs from the one I found above). You can find his schematic <a href="http://dankohn.info/projects/armdroid_1000/schematic.pdf">here</a> (and if that goes down, there&rsquo;s a link to a local copy <a href="https://dragoncoder047.github.io/armdroid/info/resources/index.html">here</a>). His part numbers differ slightly, but they&rsquo;re just different companies&rsquo; takes of the same functional component.</p>
+<p>On my board, the inputs from the DB9 connector are first amplified by 74LS125 buffers so they can drive the large number of inputs. From the buffer, the select bits go to a 74LS138 3-to-8 converter. The latch bit goes to a 74LS123 monostable multivibrator that normalizes the pulse length and sends it to an enable input of the 74LS138, routing a clock pulse to the appropriate one of the eight 74LS175 D-latches to latch in the phase bits for that motor. The ULN2003As switch the high current needed for the motors.</p>
 <p>There is more point-to-point wiring inside the base (here of the broken Armdroid, 1106). The motors all come down and terminate in a plug (including the accessory motor port wires), and there is a large reverse-polarity protection diode on the power connector. The positive wires also go through a kill switch and to one terminal of each of the accessory outputs. The low power outputs are wired to their own plug.</p>
 <figure class="figure">
 <p><img alt="inside base" src="https://dragoncoder047.github.io/armdroid/info/images/start/inside_base.png"></p>
