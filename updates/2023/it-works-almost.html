@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en_us">
     <head>
-                <title>Motor Test</title>
+                <title>It works!... almost</title>
             <meta charset="utf-8" />
             <meta name="generator" content="Pelican" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,17 +17,21 @@
 
 
     <meta property="og:site_name" content="Armdroid 1000" />
-    <meta property="og:title" content="Motor Test" />
-    <meta property="og:description" content="After my investigation with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way. I took the accessory motor …" />
+    <meta property="og:title" content="It works!... almost" />
+    <meta property="og:description" content="Today I fiddled around with the Armdroid and the patch cable I made to connect the Armdroid’s parallel port to my Arduino. After working out the pin numbers, I was able to get motors to run. Originally I was using a cheap 2-amp-max bench power supply and occasionally the …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html" />
+    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2023/it-works-almost.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Armdroid 1000 - Motor Test" />
-    <meta name="twitter:description" content="After my investigation with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way. I took the accessory motor …" />
+    <meta name="twitter:title" content="Armdroid 1000 - It works!... almost" />
+    <meta name="twitter:description" content="Today I fiddled around with the Armdroid and the patch cable I made to connect the Armdroid’s parallel port to my Arduino. After working out the pin numbers, I was able to get motors to run. Originally I was using a cheap 2-amp-max bench power supply and occasionally the …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
-    
+            <!-- PrismJS -->
+<script src="/static/prism.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@v1.x/components/"></script>
+<script src="/static/prism-runbutton.js"></script>
+<script src="https://phoo-lang.github.io/prism-phoo.js"></script>        <!-- /PrismJS -->
+
     </head>
 
     <body class="match-braces rainbow-braces">
@@ -53,30 +57,30 @@
             </nav>
         </header>
         <main>
-    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html" rel="bookmark" title="Permalink to this page">Motor Test</a></h1>
+    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2023/it-works-almost.html" rel="bookmark" title="Permalink to this page">It works!... almost</a></h1>
     
     <div class="post-info">
-        Posted <time class="published" datetime="2022-04-27T00:00:00-04:00">Wed 27 April 2022</time>
+        Posted <time class="published" datetime="2023-01-09T00:00:00-05:00">Mon 09 January 2023</time>
             <address>By
                     <a href="https://dragoncoder047.github.io/armdroid/author/dragoncoder047.html">dragoncoder047</a>
             </address>
                 <div class="category">Category: <a href="https://dragoncoder047.github.io/armdroid/category/misc.html">misc</a></div>
     </div>
-        <p><em>This post is part 2 of the testing series:</em></p>
+        <p><em>This post is part 2 of the arduino-testing series:</em></p>
         <ol class="series">
                 <li >
-                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/investigation.html'>Investigation</a>
+                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/arduino-testing-part-1.html'>Arduino Testing, part 1</a>
                 </li>
                 <li class="active">
-                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/motor-test.html'>Motor Test</a>
-                </li>
-                <li >
-                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/chip-confusion.html'>Chip Confusion</a>
+                    <a href='https://dragoncoder047.github.io/armdroid/updates/2023/it-works-almost.html'>It works!... almost</a>
                 </li>
         </ol>
-    <p>After my <a href="https://dragoncoder047.github.io/armdroid/updates/2022/investigation.html">investigation</a> with the conveyor belt, I thought that the board inside the conveyor would be able to drive any stepper motor. It had the same plug connecting to the motor as all the others and appeared to be wired up the same way.</p>
-<p>I took the accessory motor port out of the broken Armdroid and used it to connect the turntable followed by the screw slider to the conveyor belt&rsquo;s control board. And the weird thing was, no matter how I set the switches on the control panel, (fast/medium/slow, forward/reverse, etc) the motors would just refuse to run. They just made the same &ldquo;d-d-d-d-d-d-d-d-d-d-d-d&rdquo; sound like they were trying to move.</p>
-<p>I double checked all the connections, and they were okay. I double checked the <del>ULN2003A</del> (EDIT: that was an incorrect assumtion!), and it had all of its pins in its socket (and was getting quite hot, thus the heatsink). There&rsquo;s clearly something I am missing.</p>
+    <p>Today I fiddled around with the Armdroid and the patch cable I made to connect the Armdroid&rsquo;s parallel port to my Arduino. After working out the pin numbers, I was able to get motors to run.</p>
+<p>Originally I was using a cheap 2-amp-max bench power supply and occasionally the Arduino would glitch and a motor would start wiggling randomly. Doing some quick calculations with the Armdroid&rsquo;s power demands (6 motors, 2 phases each, 0.3 amps per phase) showed that the Armdroid was potentially drawing 3.6 amps, way more than the rated 2 amps of the power supply I was using, and so the voltage was probably drooping enough to cause the Arduino to go haywire.</p>
+<p>I dug out the large 12-volt NiMH battery pack that I was already planning on using for the Armdroid and hooked it up. This battery was rated for 20 amps maximum (ten times the mximum power output of the power supply) and everything worked nicely. Almost.</p>
+<p>While I was fiddling around with it I was able to determine which port address controlled to which motor. I was able to determine 6 of the 8 motor numbers from fiddling with it, and wrote them into the code with the joysticks module I had made up on a breadboard so I could control the Armdroid. I took a guess on the other two motors. </p>
+<p>Unfortunately, one motor still didn&rsquo;t work. Either I guessed wrong and I was sending the signal to the wrong motor port, or the motor was physically malfunctioning. The <code>WRIST_RIGHT</code> motor would not turn, and I do not really know why.</p>
+<p>But aside from this, the rest of it works. This is a whole lot farther along than I expected I would end up at this point in the year, and I am thankful I was even able to start this project, let alone get this far. The poor Armdroid hadn&rsquo;t probably been even turned on in over 20 years, and now the fact that a hobbyist like me was able to make it run is just amazing.</p>
             <section id="extras">
                     <div class="blogroll">
                         <ul>
