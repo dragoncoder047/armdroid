@@ -9,7 +9,7 @@
 #define P2 4
 #define PK 3
 
-Armdroid arm(PA, PB, PC, PD, P0, P1, P2, PK);
+ParallelArmdroid arm(PA, PB, PC, PD, P0, P1, P2, PK);
 
 void setup() {
     Serial.begin(115200);
