@@ -16,10 +16,10 @@ const uint8_t PHASETAB[8] = {
 #define SHOULDER 5
 #define ELBOW 4
 #define WRIST_LEFT 2
-#define WRIST_RIGHT 3
+#define WRIST_RIGHT 0
 #define GRIPPER 1
 #define ACCESSORY 7
-#define JACKS 8
+#define JACKS 3
 
 class AbstractArmdroid {
     private:
