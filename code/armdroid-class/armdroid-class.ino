@@ -12,7 +12,6 @@
 ParallelArmdroid arm(PA, PB, PC, PD, P0, P1, P2, PK);
 
 void setup() {
-    Serial.begin(115200);
     pinMode(A0, INPUT);
     pinMode(A1, INPUT);
     pinMode(A2, INPUT);
@@ -20,22 +19,20 @@ void setup() {
     pinMode(A4, INPUT);
     pinMode(A5, INPUT);
 }
-#define mmm(N, P) r = analogRead(A##N); if (abs(r - 512) > 200) arm.motorMoveby(P, r > 512 ? 2 : -2); Serial.print(arm.getPos(P)); Serial.write('\t'); t += abs(r); 
+#define mmm(N, P) r = analogRead(A##N); if (abs(r - 512) > 100) { arm.motorMoveby(P, map(r, 1023, 0, -20, 20)); t += abs(r); }
 
 void loop() {
-    arm.tick();
-    arm.tick();
+    for (int i = 0; i < 20; i++) {
+        arm.tick();
+        delay(1);
+    }
     int r;
     unsigned long t;
-    Serial.println("m0\tm1\tm2\tm3\tm6\tm7");
     mmm(0, BASE);
     mmm(1, SHOULDER);
     mmm(2, WRIST_RIGHT);
     mmm(3, WRIST_LEFT);
-    mmm(4, ELBOW);
-    mmm(5, GRIPPER);
+    mmm(4, GRIPPER);
+    mmm(5, ELBOW);
     if (t == 0) arm.torqueOff();
-    Serial.write('\n');
-    Serial.flush();
-    //The time for the serial buffer to clear functions as a delay()
 }
