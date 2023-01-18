@@ -60,7 +60,7 @@ SOCIAL = (
 
 MENUITEMS = (
     ('Site root', '/'),
-    ('Updates Archive', '/armdroid/updates/archive.html'),
+    ('Updates', '/armdroid/updates/archive.html'),
 )
 
 DEFAULT_PAGINATION = 10
