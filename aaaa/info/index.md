@@ -2,7 +2,7 @@ Title: Armdroid 1000
 Status: hidden
 Save_as: index.html
 
-![welcome banner](/armdroid/Arm_Welcome.png){style="height:80vh"}
+![welcome banner](/armdroid/Arm_Welcome.png){style="height:80vh;margin-left:auto;margin-right:auto;"}
 
 In early 2022 I found two old Armdroid 1000's plus some of their accessories in the back of my engineering teacher's storage closet. Neither of them worked. So I decided I would do some research and reverse engineering and get them to work. This site collects all the notes I made and documents I found during that effort.
 
