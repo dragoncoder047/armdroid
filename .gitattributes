@@ -1,4 +1,4 @@
 *.html linguist-generated
 a/* linguist-generated
 p/* linguist-generated
-*.md linguist-detectable
+# *.md linguist-detectable
