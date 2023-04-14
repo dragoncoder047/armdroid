@@ -79,5 +79,5 @@ class AbstractArmdroid {
             this->writeToPort(i, 0);
         }
     }
-    virtual void writeToPort(uint8_t address, uint8_t data);
+    virtual void writeToPort(uint8_t address, uint8_t data) {};
 };

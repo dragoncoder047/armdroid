@@ -1,15 +1,6 @@
 #include "armdroid.hpp"
 
-#define PA 6
-#define PB 7
-#define PC 8
-#define PD 9
-#define P0 2
-#define P1 5
-#define P2 4
-#define PK 3
-
-ParallelArmdroid arm(PA, PB, PC, PD, P0, P1, P2, PK);
+PartialSerialArmdroid arm(4, 7, 2, 0x012, 0x3456);
 
 void setup() {
     pinMode(A0, INPUT);

@@ -20,12 +20,52 @@ class ParallelArmdroid : public AbstractArmdroid {
     void writeToPort(uint8_t address, uint8_t data) {
         uint8_t bits = data << 3 | address;
         for (uint8_t i = 0; i < 7; i++) {
-            digitalWrite(this->port[i], bits & (1 << i) ? HIGH : LOW);
+            digitalWrite(this->port[i], bits & (1 << i));
         }
         delayMicroseconds(20);
         digitalWrite(this->port[7], LOW);
         delayMicroseconds(20);
         digitalWrite(this->port[7], HIGH);
+        delayMicroseconds(20);
+    }
+};
+
+class PartialSerialArmdroid : public Armdroid {
+    private:
+        uint8_t dataPin;
+        uint8_t clockPin;
+        uint8_t latchPin;
+        uint32_t dataIndexes;
+        uint32_t addressIndexes;
+    public:
+    PartialSerialArmdroid(uint8_t dataPin, uint8_t clockPin, uint8_t latchPin, uint32_t dataIndexes, uint32_t addressIndexes) {
+        this->dataPin = dataPin;
+        this->clockPin = clockPin;
+        this->latchPin = latchPin;
+        pinMode(this->dataPin, OUTPUT);
+        pinMode(this->clockPin, OUTPUT);
+        pinMode(this->latchPin, OUTPUT);
+        digitalWrite(this->dataPin, LOW);
+        digitalWrite(this->clockPin, LOW);
+        digitalWrite(this->latchPin, HIGH);
+        this->dataIndexes = dataIndexes;
+        this->addressIndexes = addressIndexes;
+    }
+    void writeToPort(uint8_t address, uint8_t data) {
+        uint8_t b = (
+            (((address >> ((this->addressIndexes >> 16) & 15)) & 1)     ) |
+            (((address >> ((this->addressIndexes >>  8) & 15)) & 1) << 1) |
+            (((address >> ((this->addressIndexes      ) & 15)) & 1) << 2) |
+            (((data    >> ((this->dataIndexes    >> 24) & 15)) & 1) << 3) |
+            (((data    >> ((this->dataIndexes    >> 16) & 15)) & 1) << 4) |
+            (((data    >> ((this->dataIndexes    >>  8) & 15)) & 1) << 5) |
+            (((data    >> ((this->dataIndexes         ) & 15)) & 1) << 6)
+        );
+        shiftOut(this->dataPin, this->clockPin, LSBFIRST, b);
+        delayMicroseconds(20);
+        digitalWrite(this->latchPin, LOW);
+        delayMicroseconds(20);
+        digitalWrite(this->latchPin, HIGH);
         delayMicroseconds(20);
     }
 };
