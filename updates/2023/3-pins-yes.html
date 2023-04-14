@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en_us">
     <head>
-                <title>Circuit Work, part 1</title>
+                <title>3 pins? Yes?</title>
             <meta charset="utf-8" />
             <meta name="generator" content="Pelican" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,15 +17,15 @@
 
 
     <meta property="og:site_name" content="Armdroid 1000" />
-    <meta property="og:title" content="Circuit Work, part 1" />
-    <meta property="og:description" content="Today I started to work out the circuit of the small control board in the conveyor belt, before I tackled the larger circuit board in the Armdroid itself. There are pictures of this circuit board on the conveyor images page. First, I worked out the power supply. This is the …" />
+    <meta property="og:title" content="3 pins? Yes?" />
+    <meta property="og:description" content="It’s been quite a while since I last shared an update. But then again, not much has happened since then, either. I figured out how to remove the claw from its mounting on the wrist joint, and replaced it with the old-style three finger gripper from the spare-parts Armdroid …" />
     <meta property="og:image" content="/armdroid/armdroid.png" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html" />
+    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/updates/2023/3-pins-yes.html" />
     <meta property="og:locale" content="['']" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Armdroid 1000 - Circuit Work, part 1" />
-    <meta name="twitter:description" content="Today I started to work out the circuit of the small control board in the conveyor belt, before I tackled the larger circuit board in the Armdroid itself. There are pictures of this circuit board on the conveyor images page. First, I worked out the power supply. This is the …" />
+    <meta name="twitter:title" content="Armdroid 1000 - 3 pins? Yes?" />
+    <meta name="twitter:description" content="It’s been quite a while since I last shared an update. But then again, not much has happened since then, either. I figured out how to remove the claw from its mounting on the wrist joint, and replaced it with the old-style three finger gripper from the spare-parts Armdroid …" />
     <meta name="twitter:image" content="/armdroid/armdroid.png" />
     
     </head>
@@ -53,30 +53,21 @@
             </nav>
         </header>
         <main>
-    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html" rel="bookmark" title="Permalink to this page">Circuit Work, part 1</a></h1>
+    <h1><a href="https://dragoncoder047.github.io/armdroid/updates/2023/3-pins-yes.html" rel="bookmark" title="Permalink to this page">3 pins? Yes?</a></h1>
     
     <div class="post-info">
-        Posted <time class="published" datetime="2022-09-21T00:00:00-04:00">Wed 21 September 2022</time>
-            <br /> Modified <time class="modified" datetime="2023-04-14T00:00:00-04:00">Fri 14 April 2023</time>
+        Posted <time class="published" datetime="2023-04-14T00:00:00-04:00">Fri 14 April 2023</time>
             <address>By
                     <a href="https://dragoncoder047.github.io/armdroid/author/dragoncoder047.html">dragoncoder047</a>
             </address>
                 <div class="category">Category: <a href="https://dragoncoder047.github.io/armdroid/category/misc.html">misc</a></div>
     </div>
-        <p><em>This post is part 1 of the circuit-work series:</em></p>
-        <ol class="series">
-                <li class="active">
-                    <a href='https://dragoncoder047.github.io/armdroid/updates/2022/circuit-work-part-1.html'>Circuit Work, part 1</a>
-                </li>
-        </ol>
-    <p>Today I started to work out the circuit of the small control board in the conveyor belt, before I tackled the larger circuit board in the Armdroid itself. There are pictures of this circuit board on the <a href="https://dragoncoder047.github.io/armdroid/info/images/conveyor.html">conveyor images page</a>.</p>
-<p>First, I worked out the power supply. This is the entire top half of the board, and the traces are very wide, as the motor is very power-hungry:</p>
-<p><img alt="power supply" src="https://dragoncoder047.github.io/armdroid/updates/2022/power_supply_circuit.png"></p>
-<p>This is just a standard LM7805-or-equivalent DC power supply circuit. The 12 volts AC is rectified and fed into the buffer capacitor, and it is then regulated down by a low-value resistor and a linear regulator to 5 volts for the logic circuits.</p>
-<p>Next is the 555 timer clock circuit:</p>
-<p><img alt="clock" src="https://dragoncoder047.github.io/armdroid/updates/2022/555_clock_circuit.png"></p>
-<p>Again, this is a very standard circuit to generate a clock signal using a 555 timer. The chosen values for the resistors cause the circuit to oscillate at 47 Hz for low speed (only R4 connected), 168 Hz for medium speed (R3 &amp; R4 in parallel) and 252 Hz for high (R2 &amp; R4 in parallel), according to the Falstad simulator. (It uses a lot fo power in my opinion. If R2, R3, R4, and R5 were swapped out for 1k&ohm;, 4.7k&ohm;, 27k&ohm;, and 10k&ohm;, and C6 changed to 0.47&micro;F, it would still oscillate at the same frequencies while using only 10% of the power as the existing circuit.)</p>
-<p>I have not been able to work out the circuit of the latches and motor driver yet. It&rsquo;s hard because some of the traces are hidden under the IC sockets. Hopefully I will figure it out soon.</p>
+    <p>It&rsquo;s been quite a while since I last shared an update. But then again, not much has happened since then, either.</p>
+<p>I figured out how to remove the claw from its mounting on the wrist joint, and replaced it with the old-style three finger gripper from the spare-parts Armdroid. And, as I had read elsewhere, it looked very creepy and lifelike when I operated it &ndash; that is, until one of the three strings connected to the fingers snapped (it had probably dry-rotted) and rendered the whole claw useless and I was forced to reinstall the standard 2-finger gripper.</p>
+<p>I also was able to install the new Anderson-connector power adapter I had made up <a href="https://dragoncoder047.github.io/armdroid/updates/2022/disassembled.html">earlier</a>, and </p>
+<p>The Arduino program I initially wrote still worked, and it worked very well for what it did. Unfortunately I have not yet been able to add any sort of autonomous movement, but I don&rsquo;t think that would be too difficult. The only downside is that trigonometry on the Arduino is very slow &ndash; although it can can be sped up a lot from the default.</p>
+<p>The original interface to the Armdroid I made used a parallel port, which occupied 8 pins of the Arduino and I really couldn&rsquo;t do much else (sensors, etc). I also didn&rsquo;t have any serial-in parallel-out pin expander chips to be able to reduce the pin usage of the Arduino.</p>
+<p>Then my engineering teacher taught us about shift registers and how they are made out of flip-flops&hellip; and I remembered that I had a spare Armdroid circuit board lying around, which conspicuously uses eight quad D flip flop integrated circuits (<a href="/armdroid/info/resources/datasheets/74LS175-d-flip-flop.pdf">74LS175</a>) to hold the bits for the stepper motors. Since I didn&rsquo;t need the circuit board, I pulled out two of them (thank God for the IC sockets!) and started wiring them up into a shift register. I also wrote <a href="https://github.com/dragoncoder047/armdroid/blob/c06672e7eefa750ace01bf089cd30fd8e7fa89f4/code/armdroid-class/armdroid.hpp#L33-L71">some Arduino code</a> to interface it to the homebrew shift register. I haven&rsquo;t completely wired it up yet, but I&rsquo;m crossing my fingers it will work. In theory it should.</p>
             <section id="extras">
                     <div class="blogroll">
                         <ul>
