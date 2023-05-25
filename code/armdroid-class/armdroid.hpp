@@ -62,10 +62,7 @@ class PartialSerialArmdroid : public Armdroid {
             (((data    >> ((this->dataIndexes         ) & 15)) & 1) << 6)
         );
         shiftOut(this->dataPin, this->clockPin, LSBFIRST, b);
-        delayMicroseconds(20);
         digitalWrite(this->latchPin, LOW);
-        delayMicroseconds(20);
         digitalWrite(this->latchPin, HIGH);
-        delayMicroseconds(20);
     }
 };
