@@ -10,12 +10,12 @@ void setup() {
     pinMode(A4, INPUT);
     pinMode(A5, INPUT);
 }
-#define mmm(N, P) r = analogRead(A##N); if (abs(r - 512) > 100) { arm.motorMoveby(P, map(r, 1023, 0, -20, 20)); t += abs(r); }
 
+#define mmm(N, P) r = analogRead(A##N); if (abs(r - 512) > 100) { arm.motorMoveby(P, map(r, 1023, 0, -20, 20)); t += abs(r); }
 void loop() {
     for (int i = 0; i < 20; i++) {
         arm.tick();
-        delay(1);
+        delayMicroseconds(300);
     }
     int r;
     unsigned long t;
