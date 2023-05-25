@@ -30,7 +30,7 @@ class ParallelArmdroid : public AbstractArmdroid {
     }
 };
 
-class PartialSerialArmdroid : public Armdroid {
+class PartialSerialArmdroid : public AbstractArmdroid {
     private:
         uint8_t dataPin;
         uint8_t clockPin;
