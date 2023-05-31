@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include "armbase.hpp"
 
+typedef uint8_t (*bitpacker_t)(uint8_t address, uint8_t data);
+
 class ParallelArmdroid : public AbstractArmdroid {
     private:
         uint8_t port[8];
@@ -35,10 +37,9 @@ class PartialSerialArmdroid : public AbstractArmdroid {
         uint8_t dataPin;
         uint8_t clockPin;
         uint8_t latchPin;
-        uint32_t dataIndexes;
-        uint32_t addressIndexes;
+        bitpacker_t packBits;
     public:
-    PartialSerialArmdroid(uint8_t dataPin, uint8_t clockPin, uint8_t latchPin, uint32_t dataIndexes, uint32_t addressIndexes) {
+    PartialSerialArmdroid(uint8_t dataPin, uint8_t clockPin, uint8_t latchPin, bitpacker_t packBits) {
         this->dataPin = dataPin;
         this->clockPin = clockPin;
         this->latchPin = latchPin;
@@ -47,22 +48,22 @@ class PartialSerialArmdroid : public AbstractArmdroid {
         pinMode(this->latchPin, OUTPUT);
         digitalWrite(this->dataPin, LOW);
         digitalWrite(this->clockPin, LOW);
-        digitalWrite(this->latchPin, HIGH);
-        this->dataIndexes = dataIndexes;
-        this->addressIndexes = addressIndexes;
+        digitalWrite(this->latchPin, LOW);
+        this->packBits = packBits;
     }
     void writeToPort(uint8_t address, uint8_t data) {
-        uint8_t b = (
-            (((address >> ((this->addressIndexes >> 16) & 15)) & 1)     ) |
-            (((address >> ((this->addressIndexes >>  8) & 15)) & 1) << 1) |
-            (((address >> ((this->addressIndexes      ) & 15)) & 1) << 2) |
-            (((data    >> ((this->dataIndexes    >> 24) & 15)) & 1) << 3) |
-            (((data    >> ((this->dataIndexes    >> 16) & 15)) & 1) << 4) |
-            (((data    >> ((this->dataIndexes    >>  8) & 15)) & 1) << 5) |
-            (((data    >> ((this->dataIndexes         ) & 15)) & 1) << 6)
-        );
-        shiftOut(this->dataPin, this->clockPin, LSBFIRST, b);
-        digitalWrite(this->latchPin, LOW);
+        uint8_t b = this->packBits(address, data);
+        for (int i = 0; i < 7; i++) {
+            digitalWrite(this->dataPin, b & 1);
+            delayMicroseconds(30);
+            digitalWrite(this->clockPin, HIGH);
+            delayMicroseconds(30);
+            digitalWrite(this->clockPin, LOW);
+            delayMicroseconds(30);
+            b >>= 1;
+        }
         digitalWrite(this->latchPin, HIGH);
+        delayMicroseconds(30);
+        digitalWrite(this->latchPin, LOW);
     }
 };
