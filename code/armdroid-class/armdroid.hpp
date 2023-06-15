@@ -54,6 +54,9 @@ class PartialSerialArmdroid : public AbstractArmdroid {
     void writeToPort(uint8_t address, uint8_t data) {
         uint8_t b = this->packBits(address, data);
         for (int i = 0; i < 7; i++) {
+            #ifdef ARMDROID_DEBUG
+            Serial.write('0' + (b & 1));
+            #endif
             digitalWrite(this->dataPin, b & 1);
             delayMicroseconds(30);
             digitalWrite(this->clockPin, HIGH);
@@ -62,8 +65,11 @@ class PartialSerialArmdroid : public AbstractArmdroid {
             delayMicroseconds(30);
             b >>= 1;
         }
+        #ifdef ARMDROID_DEBUG
+        Serial.println();
+        #endif
         digitalWrite(this->latchPin, HIGH);
-        delayMicroseconds(30);
+        delayMicroseconds(60);
         digitalWrite(this->latchPin, LOW);
     }
 };
