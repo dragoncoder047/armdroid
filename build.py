@@ -21,14 +21,14 @@ ICON = "/armdroid/armdroid_sm.png"
 ICON_MIMETYPE = "image/png"
 THEME_CSS_FILE = "/armdroid/theme.css"
 THEME_MAIN_CSS = "/static/css/main.css"
-EXTRA_JS = "/static/misc.js"
+EXTRA_JS = ("/static/misc.js", "/armdroid/badlink_detector.js")
 THEME_STATIC_DIR = "static/"
 USE_FOLDER_AS_CATEGORY = False
 
 GOOGLE_TAG = "G-XR0F89CCGK"  # cSpell: ignore ccgk
 
-PATH = "aaaa/"
-OUTPUT_PATH = "./"
+PATH = "markdown/"
+OUTPUT_PATH = "docs/"
 
 TIMEZONE = "America/New_York"
 
@@ -48,10 +48,13 @@ DISPLAY_CATEGORIES_ON_MENU = False
 AUTHOR_SAVE_AS = AUTHORS_SAVE_AS = ""
 TAG_SAVE_AS = TAGS_SAVE_AS = ""
 CATEGORY_SAVE_AS = CATEGORIES_SAVE_AS = ""
-ARTICLE_SAVE_AS = ARTICLE_URL = "updates/{date:%Y}/{slug}.html"
-ARCHIVES_SAVE_AS = "updates/archive.html"
+ARTICLE_URL = "updates/{date:%Y}/{slug}"
+ARTICLE_SAVE_AS = ARTICLE_URL + "/index.html"
+ARCHIVES_URL = "updates/"
+ARCHIVES_SAVE_AS = "updates/index.html"
 PATH_METADATA = r"(?P<path_no_ext>.*)\.[^.]*"
-PAGE_URL = PAGE_SAVE_AS = "{path_no_ext}.html"
+PAGE_SAVE_AS = "{path_no_ext}/index.html"
+PAGE_URL = "{path_no_ext}"
 FILENAME_METADATA = ""
 
 # Blogroll
@@ -67,6 +70,7 @@ LINKS = (
 # Social
 SOCIAL = (
     (f"{AUTHOR} on GitHub", f"https://github.com/{AUTHOR}"),
+    (f"{AUTHOR} on YouTube", f"https://youtube.com/@{AUTHOR}"),
 )
 
 MENUITEMS = (
@@ -77,8 +81,8 @@ MENUITEMS = (
 DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 3
 PAGINATION_PATTERNS = (
-    (1, "{name}{extension}", "{name}{extension}"),
-    (2, "{name}_{number}{extension}", "{name}_{number}{extension}"),
+    (1, "{url}", "{save_as}"),
+    (2, "{base_name}/page{number}", "{base_name}/page{number}/index.html"),
 )
 
 PAGE_PATHS = ["info/"]
@@ -161,4 +165,10 @@ PLUGINS = [
 
 if __name__ == "__main__":
     import os
-    os.system(f"pelican {PATH} -o {OUTPUT_PATH} -s {__file__}")
+    import shlex
+    os.system(f"""pelican {
+        shlex.quote(PATH)
+    } -o {
+        shlex.quote(OUTPUT_PATH)
+    } -s {
+        shlex.quote(__file__)}""")

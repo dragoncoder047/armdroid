@@ -24,3 +24,7 @@
     --font-body: "Open Sans", sans-serif;
     --font-code: "Ubuntu Mono", monospace;
 }
+
+a.broken {
+    color: var(--theme-3);
+}

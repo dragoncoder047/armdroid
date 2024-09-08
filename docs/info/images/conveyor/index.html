@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en_us">
+    <head>
+                <title>Conveyor Images</title>
+            <meta charset="utf-8" />
+            <meta name="generator" content="Pelican" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="/static/css/main.css" />
+            <link rel="stylesheet" href="/armdroid/theme.css" />
+                    <link rel="icon" href="/armdroid/armdroid_sm.png" type="image/png" />
+                    <link rel="apple-touch-icon" href="/armdroid/armdroid_sm.png" type="image/png" />
+                        <script src="/static/misc.js"></script>
+                        <script src="/armdroid/badlink_detector.js"></script>
+
+
+
+    
+
+    <meta property="og:site_name" content="Armdroid 1000" />
+    <meta property="og:title" content="Conveyor Images" />
+    <meta property="og:description" content="The conveyor accessory is just a long conveyor, about three feet long. One end holds a power supply unit and a stepper motor to run the belt and a simple control board that controls the speed and direction of the conveyor. Because of the power supply the whole thing weighs …" />
+    <meta property="og:image" content="/armdroid/armdroid.png" />
+    <meta property="og:type" content="page" />
+    <meta property="og:url" content="https://dragoncoder047.github.io/armdroid/info/images/conveyor" />
+    <meta property="og:locale" content="['']" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Armdroid 1000 - Conveyor Images" />
+    <meta name="twitter:description" content="The conveyor accessory is just a long conveyor, about three feet long. One end holds a power supply unit and a stepper motor to run the belt and a simple control board that controls the speed and direction of the conveyor. Because of the power supply the whole thing weighs …" />
+    <meta name="twitter:image" content="/armdroid/armdroid.png" />
+    
+    </head>
+
+    <body class="match-braces rainbow-braces">
+        <header>
+                <a href="/armdroid"><div class="flex-row"><img src="/armdroid/armdroid.png" width="145" height="115" /><div id="sitename-text" class="flex-column"><h1>Armdroid 1000</h1><!-- h2>SITESUBTITLE</h2 --></div></div></a>
+            <nav>
+                <ul>
+                    <li><a href="https://dragoncoder047.github.io/armdroid/">Home</a></li>
+                        <li><a href="/">Site root</a>
+                        </li>
+                        <li><a href="/armdroid/updates/archive.html">Updates</a>
+                        </li>
+                            <li><a href="https://dragoncoder047.github.io/armdroid/info/images/armdroid">Images</a></li>
+                            <li><a href="https://dragoncoder047.github.io/armdroid/info/resources">Resources</a></li>
+                    <li>
+                        <form action="https://www.google.com/search" method="GET">
+                            <input name="q" type="search" placeholder="Search"></input>
+                            <input type="hidden" name="as_sitesearch" value="https://dragoncoder047.github.io/armdroid"></input>
+                            <input type="submit" value="Search"></input>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+    <h1>Conveyor Images</h1>
+    
+
+
+    <p>The conveyor accessory is just a long conveyor, about three feet long. One end holds a power supply unit and a stepper motor to run the belt and a simple control board that controls the speed and direction of the conveyor. Because of the power supply the whole thing weighs abut ten pounds, and combined with its size, makes it a little awkward to move around and store.</p>
+<figure class="figure">
+<p><img alt="conveyor front" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_front.png"></p>
+</figure>
+<p>On the side there is a fuse receptable and a power switch.</p>
+<figure class="figure">
+<p><img alt="conveyor switch side" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_switch.png"></p>
+<figcaption>Strange, the fuse rating isn&rsquo;t marked.</figcaption>
+</figure>
+<p>Inside the control box you can see the toroidal transformer in the back, the stepper motor (mounted on slots to adjust the belt tension), and the circuit board.</p>
+<figure class="figure">
+<p><img alt="conveyor inside" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_inside.png"></p>
+</figure>
+<figure class="figure">
+<p><img alt="circuit top" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_board_front.png"></p>
+<figcaption>I do not know what U1 is. I pried off the heatsink, and from what I could make out the part number is UCN4204B. U2 is a 74LS08 quad AND gate, one being used to gate the clock signal. U3 (next to the small blue 4.7&micro;F timing capacitor) is a 555 timer set up as an oscillator.</figcaption>
+</figure>
+<p>Someone had <del>green</del> yellow-wired the back of the circuit board to fix a routing error.</p>
+<figure class="figure">
+<p><img alt="circuit bottom" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_board_back.png"></p>
+<figcaption>The pin on the bottom was supposed to be connected to +5V, but it was routed to GND by mistake. The trace had been carefully cut (due to the proximity of the nearby pins) and the yellow wire connected to it and the OUT pin of the voltage regulator.</figcaption>
+</figure>
+<p>The back of the control panel contains some point-to-point wiring to connect all the banana jacks and switches to the ribbon cable from the main circuit board.</p>
+<figure class="figure">
+<p><img alt="conveyor control board wiring" src="https://dragoncoder047.github.io/armdroid/info/images/conveyor/start/conveyor/conveyor_control_wiring.png"></p>
+<figcaption>The direction, clock enable, and motor power enable switches are wired with the center pin connected to the input of a control signal (pulled up by a 10k&ohm; resistor on the board) with one side connected to ground and the other connected to the banana jacks next to the switch to allow remote control by shorting the two jacks to each other with a relay. I really don&rsquo;t know what the 10&micro;F capacitor is for &ndash; debouncing, perhaps?</figcaption>
+</figure>
+            <section id="extras">
+                    <div class="blogroll">
+                        <ul>
+                                <li><a href="https://armdroid1000.wordpress.com">Armdroid 1000 site</a></li>
+                                <li><a href="http://www.dankohn.info/projects/armdroid.html">Dan Kohn&apos;s LabVolt 5100</a></li>
+                                <li><a href="https://armdroid1.blogspot.com/">Richard Morris&apos; Armdroid 1</a></li>
+                                <li><a href="http://www.senster.com/alex_zivanovic/armdroid/index.htm">Alex Zivanovic&apos;s Armdroid 1</a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                                <li><a href="https://github.com/dragoncoder047">dragoncoder047 on GitHub</a></li>
+                                <li><a href="https://youtube.com/@dragoncoder047">dragoncoder047 on YouTube</a></li>
+                        </ul>
+                    </div>
+            </section>
+        </main>
+        <footer>
+            <address>
+                    Site built by <a href="https://getpelican.com/">Pelican</a>
+            </address>
+            <a href="#" onclick="window.scrollTo({top: 0, left: 0});">Back to top</a>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XR0F89CCGK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-XR0F89CCGK");
+    </script>
+
+        </footer>
+    </body>
+</html>
