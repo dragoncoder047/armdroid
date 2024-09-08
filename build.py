@@ -75,7 +75,7 @@ SOCIAL = (
 
 MENUITEMS = (
     ("Site root", "/"),
-    ("Updates", "/armdroid/updates/archive.html"),
+    ("Updates", f"/armdroid/{ARCHIVES_URL}"),
 )
 
 DEFAULT_PAGINATION = 10
