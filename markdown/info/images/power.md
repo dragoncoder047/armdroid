@@ -8,7 +8,7 @@ The power supply that came with the Armdroid was just a big black box that weigh
 
     %: It's pretty dusty, I guess, because it doesn't work.
 
-The back of the power supply is dominated by a large heatsink containing two [2N3771](../resources/datasheets/2N3771-npn-transistor.pdf) power NPN transistors.
+The back of the power supply is dominated by a large heatsink containing two [2N3771](../resources/resources/datasheets/2N3771-npn-transistor.pdf) power NPN transistors.
 
 %%% figure
     ![power transistors]({attach}start/power/power_back.jpg)
@@ -25,7 +25,7 @@ Pulling the capacitor out of the clamp allowed me to get a shot of the underside
 
     %: The large capacitor looks like it is rated for 25V, but when I turned on the power supply it charged up to 60V. I'm proably not reading that label right.
 
-Here's a zoomed in shot of the circuit board. In the socket is a [LM723CN](../resources/datasheets/LM723CN-voltage-regulator.pdf) power regulator, on the heatsink a [TIP29](../resources/datasheets/TIP29-TIP30-transistor.pdf) NPN transistor, and the third thing is a [2N6509](../resources/datasheets/2N650x-scr.pdf) thyristor.
+Here's a zoomed in shot of the circuit board. In the socket is a [LM723CN](../resources/resources/datasheets/LM723CN-voltage-regulator.pdf) power regulator, on the heatsink a [TIP29](../resources/resources/datasheets/TIP29-TIP30-transistor.pdf) NPN transistor, and the third thing is a [2N6509](../resources/resources/datasheets/2N650x-scr.pdf) thyristor.
 
 %%% figure
     ![details]({attach}start/power/power_circuit_detail.png)
